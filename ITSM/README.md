@@ -13,6 +13,7 @@ To ensure data integrity and avoid disastrous accidental alterations to the live
 * **Next Version (Planned):** Implement logic to differentiate between *Incidents* and *Service Requests*.
 
 ---
+<br>
 
 ## Local Database Setup (MySQL Workbench)
 If you need to set up the local development database from the exported backup file, follow these steps in MySQL Workbench:
@@ -35,6 +36,26 @@ If you need to set up the local development database from the exported backup fi
 `C:\Users\abhigyansen\OneDrive - virtualemployee P Ltd\Documents\itsmdb_backup.sql`
 4. Under the **Default Target** Schema dropdown, select `cerebree_itsmdb` *(the blank database you created in Step 1)*.
 5. Click the **Start Import** button in the bottom right corner to populate the database.
+
+## After Setup
+> *Follow the Steps below when the Setup is already completly and the system is shutdown, work to be continued again. The Dummy Database will be present in the Workbench, its just that: the SQL server needs to be started.*
+
+### Step 1: Turn on MySQL Server
+1. Open File Explorer and navigate to the `bin` folder: `C:\Users\abhigyansen\Downloads\mysql-8.0.45-winx64\mysql-8.0.45-winx64\bin`
+2. Click the folder's address bar at the top, type `cmd`, and press **Enter**.
+3. In the black Command Prompt window, type this exact command and press **Enter**: `mysqld --console`
+4. The server is now running. **Minimize this window, but DO NOT close it**. *(Closing it shuts down the database)*.
+
+### Step 2: Open Workbench
+1. Open MySQL Workbench.
+2. Double-click the **Local ITSM** connection box.
+3. If prompted, enter the password: `admin123`
+
+You are now connected and ready to work!
+
+---
+
+<br>
 
 ### Usage: Database Viewer (v1.1)
 The project currently includes a Python script to test the database connection and view its contents.
